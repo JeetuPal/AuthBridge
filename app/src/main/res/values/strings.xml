@@ -3,4 +3,12 @@
 
   <!-- TODO: Remove or change this placeholder text -->
   <string name="hello_blank_fragment">Hello blank fragment</string>
+  <string name="header_welcome">Welcome here !!</string>
+  <string name="prompt_email">Email</string>
+  <string name="prompt_password">Password</string>
+  <string name="signin">SignIn</string>
+  <string name="register">Register</string>
+  <string name="password">Password</string>
+  <string name="email">Email</string>
+  <string name="welcome">Welcome Home</string>
 </resources>

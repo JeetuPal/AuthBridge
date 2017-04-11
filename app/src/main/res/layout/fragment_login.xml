@@ -1,13 +1,75 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/root_login_fragment"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   tools:context="com.baxi.authbridge.login.LoginFragment">
 
-  <!-- TODO: Update blank fragment layout -->
-  <TextView
+  <RelativeLayout
+    android:id="@+id/cont_login_content"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:text="@string/hello_blank_fragment" />
+    android:layout_height="match_parent">
+    <TextView
+      android:id="@+id/tv_login_header"
+      style="@style/Label.CredentialHeader"
+      android:layout_marginTop="16dp"
+      android:text="@string/header_welcome"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" />
+    <TextView
+      android:id="@+id/tv_login_email_sub"
+      style="@style/Label.Sub"
+      android:layout_marginTop="16dp"
+      android:layout_below="@+id/tv_login_header"
+      android:text="@string/email"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" />
+    <EditText
+      android:id="@+id/et_login_email_sub"
+      style="@style/InputField.Credentials.Email"
+      android:layout_below="@+id/tv_login_email_sub"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" />
+    <TextView
+      android:id="@+id/tv_login_password"
+      style="@style/Label.Sub"
+      android:layout_marginTop="16dp"
+      android:layout_below="@+id/et_login_email_sub"
+      android:text="@string/password"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" />
+    <EditText
+      android:id="@+id/et_login_password"
+      style="@style/InputField.Credentials.Password"
+      android:layout_below="@+id/tv_login_password"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" />
 
+    <Button
+      android:id="@+id/btn_login_submit"
+      style="@style/Button.Flat.Primary"
+      android:layout_marginTop="16dp"
+      android:layout_below="@+id/et_login_password"
+      android:text="@string/signin"
+      android:layout_centerInParent="true"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content" />
+
+    <Button
+      android:id="@+id/btn_login_"
+      android:layout_marginTop="16dp"
+      android:layout_below="@+id/btn_login_submit"
+      android:text="@string/register"
+      android:layout_centerInParent="true"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content" />
+
+  </RelativeLayout>
+
+  <ProgressBar
+    android:id="@+id/pro_login_loading"
+    android:layout_gravity="center"
+    android:visibility="gone"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
 </FrameLayout>
